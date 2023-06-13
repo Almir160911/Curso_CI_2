@@ -9,6 +9,7 @@ on:
 jobs:
 
   test:
+  
     runs-on: ${{ matrix.os}}
     env:
       HOST: localhost
@@ -16,11 +17,11 @@ jobs:
       USER: root
       PASSWORD: root
       DBNAME: root
-
     strategy:
       matrix:
         go_version: ['1.18', '1.17', '>=1.18']
         os: ['ubuntu-latest']
+
     steps:
     - uses: actions/checkout@v3
 
